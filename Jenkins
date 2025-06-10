@@ -1,32 +1,32 @@
 pipeline {
     agent any
-    /*tools {
-        maven 'Maven 3.8.6'
-    }*/
+    tools {
+        maven 'Maven 3.9.5'
+    }
     stages {
         stage('Clean') {
             steps {
                 echo "Project Cleaning..........."
-                //sh "mvn clean"
+                sh "mvn clean"
             }
         }
         // etc...
         stage('Build') {
             steps {
                 echo "Project Building..........."
-                //sh "mvn compile"
+                sh "mvn compile"
             }
         }
         stage('Test') {
             steps {
                 echo "Project Testing..........."
-                //sh "mvn test"
+                sh "mvn test"
             }
         }
         stage('Deploy') {
             steps {
                 echo "Project Deploying..........."
-                //sh "mvn deploy"
+                sh "mvn deploy"
             }
         }
     }
